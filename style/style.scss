@@ -1,0 +1,104 @@
+@import 'mixin';
+@import 'varible';
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.my__content{
+    max-width: 1240px;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    .nav{
+        width: 100%;
+        @include flex (space-between) ;
+        padding: 24px 0;
+        .links{
+            @include flex (space-between);
+            gap: 30px;
+            list-style: none;
+        }
+        .link{
+            text-decoration: none;
+            color: $text;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.36px;
+            text-align: left;
+        }
+        .btn{
+            @include btn;
+            &:hover{
+                @include btnhover;
+            }
+        }
+        
+    }
+}
+.content{
+    width: 100%;
+    margin: auto;
+    .content_img1{
+        width: 100%;
+        position: relative;
+        .item{
+            @include textf($text , 61px , 600);
+            padding: 0 129px;
+            text-transform: capitalize;
+        }
+        .item2{
+            @include textf($text,19.3px,500);
+            padding: 0 352px;  
+            text-transform: capitalize;
+        }
+        .btn2{
+            max-width: 226px;
+            background-color: #EC6C21;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+            padding: 18px 30px  18px 30px;
+            display: flex;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.36px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 528px;
+            &:hover{
+                @include btnhover;
+            }
+        }
+        .img{
+            position: absolute;
+        }
+        .img1{
+            top: -14px;
+            left: 950px;
+            gap: 0px;
+            opacity: 0px;
+        }
+        .img2{
+            top: 144px;
+            left: 143px;
+            gap: 0px;
+            opacity: 0px;
+        }
+        .img3{
+            top: 231px;
+            left: 119px;
+            gap: 0px;
+            opacity: 0px;
+        }
+        .img4{
+            top: 448px;
+            left: -99px;
+            gap: 0px;
+            z-index: -1;
+            opacity: 0px;
+            
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@mixin flex ($space){
+    display: flex;
+    align-items: center;
+    justify-content: $space;
+}
+@mixin textf($color , $size , $weight){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-align: center;
+}
+@mixin btn{
+        background-color: #EC6C21;
+        padding: 18px    30px 18px 30px;
+        gap: 10px;
+        color: white;
+        @include flex (space-between);
+        transition: all 0.5s;
+}
+@mixin btnhover{
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 1px black;
+    transform: scale(1.1);
+}
